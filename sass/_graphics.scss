@@ -1,0 +1,229 @@
+#graphics{
+        
+    padding: 50px 0px;
+
+    .container{
+        width:100%;
+        padding: 0px 2%;
+        .items{
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            & > div{
+                padding: 92px 92px 50px 92px;
+                margin-bottom: 15px;
+                @include midScreen{
+                    padding: 50px 5px;
+                }
+                @include tabletForText{
+                    padding: 50px 20px;
+                }
+                @include mobile{
+                    margin: 12px;
+                }
+            }
+
+            .item1{
+                background: $bgSection;
+                flex-basis: 49%;
+                .text{
+                    
+                    strong{
+                        font-family: 'SF-Pro-Display-Bold';
+                        font-size:32px;
+                        font-weight: 600;
+                    }
+                    p{
+                        color:$grey;
+                        line-height: 25px;
+                        font-size:17px;
+                        font-family: 'SF-Pro-light';
+                        margin-bottom: 75px;
+                    }
+
+                }
+                .sizes{
+                    ul{
+                        list-style:none;
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width:80%;
+                        margin-bottom: 30px;
+
+                        
+                        li{
+                            flex-basis: 30%;
+                            height:23px;
+                            align-self: center;
+                            vertical-align: middle;
+
+                            &:first-child{
+                                flex-basis: 20%;
+                                color: #333333;
+                            }
+
+                            &:not(:first-child){
+                                position: relative;
+                                &::after{
+                                    content: '';
+                                    width: 1px;
+                                    height: 40px;
+                                    bottom: -6px;
+                                    position: absolute;
+                                    left: -20px;
+                                    background: $grey;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fast{
+                    margin-top: 150px;
+                    ul{
+                        list-style: none;
+
+                        li{
+                            
+                            span{
+                                color:$orange;
+                                font-size:42px;
+                                font-family: 'SF-Pro';
+                            }
+
+                            strong{
+                                font-weight: lighter;
+                                font-size: 12px;
+                                margin-left: 15px;
+                            }
+
+                            .orange-line{
+                                width: 45%;
+                                height: 4px;
+                                background: $orange;
+                                margin: 15px 0px;
+                            }
+
+                            .grey-line{
+                                width:30%;
+                                height: 4px;
+                                background: $lightGrey;
+                                margin: 15px 0px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            .item2{
+                background: $bgSection;
+                flex-basis: 49%;
+                @include mobile{
+                    display:flex;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .item3, .item4{
+
+                p{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        height: 3px;
+                        background: black;
+                        width: 35px;
+                        position: absolute;
+                        bottom: -55px;
+                        left: 0px;
+                    }
+                }
+
+                .up-to{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include tabletForText{
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                    ul{
+                        list-style: none;
+                        @include tabletForText{
+                            margin-bottom: 30px;
+                        }
+                        
+                        li{
+                            
+                            &:nth-child(2){
+                                font-size: 32px;
+                                font-weight: bolder;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            // items on mobile screens
+            @include mobile{
+                flex-direction: column;
+                
+                & > div{
+                    padding: 50px 25px;
+                }
+
+                .item1{
+                        order: 1;
+                        
+                        .text{
+                            strong{
+                                font-size: 24px;
+                                font-family: "SF-Pro";
+                                font-weight: 500;
+                                width: 78%;
+                            }
+                            p{
+                                font-size: 17px;
+                            }
+
+                            
+                        }
+
+                        .sizes{
+                            ul{
+                                width:100%;
+                                display: flex;
+                                flex-direction: column;
+                                li{
+                                    font-size: 25px;
+                                    margin: 8px;
+                                    align-self: flex-start;
+                                    flex-basis: 33% !important;
+                                    &:not(:first-child):after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    .fast{
+                        
+                    }
+                }
+            }
+
+            @include tabletForText{
+                flex-direction: row;
+
+            }
+        }
+        
+    }
+}

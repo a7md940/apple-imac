@@ -1,0 +1,26 @@
+#color.next-parallax{
+    margin-top:0px;
+    padding: 100px 0px;
+    font-size: 28px;
+
+    @include mobile{
+        padding: 50px 25px;
+    }
+    strong{
+
+        @include mobile{
+            font-size: 18px;
+        }
+    }
+    p{
+        font-family: 'SF-Thin';
+        font-size: 25px;
+        width: 75%;
+
+        @include mobile{
+            font-size: 18px;
+            width: 100%;
+            line-height: 30px;
+        }
+    }
+}

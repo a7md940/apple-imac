@@ -1,0 +1,90 @@
+#performance{
+    position: relative;
+    height: 1426px;
+    bottom:0px;
+    width:100%;
+    background: #FAFAFA;
+    padding: 50px 0px;
+    z-index: -5;
+
+    @include mobile{
+        height:unset;
+        padding: 50px 25px;
+        height: 500px;
+    }
+
+    @include midScreen{
+        height: 949px;
+    }
+
+    .container{
+
+        margin-bottom: 200px;
+
+        strong{
+            display:block;
+            font-size: 20px;
+            font-weight: 100;
+            margin-bottom: 15px;
+        }
+        span{
+            font-size: 72px;
+            font-family: 'SF-Pro';
+            margin-bottom: 25px;
+            display: block;
+    
+            @include mobile{
+                font-size: 31px;
+                font-weight: bold;
+                
+            }
+        }
+    }
+    .screen-img{
+
+        img{
+            width:1280px;
+            height: 1470px;
+            margin: 0 auto;
+            display:block;
+    
+            @include mobile{
+                width: 95%;
+                height: auto;
+                margin-top:100px;
+            }
+            @include midScreen{
+                width: 80%;
+                height: auto;
+            }
+            @include lgScreen{
+                width: 100%;
+            }
+        }
+    }
+}
+
+#performance-text{
+    background: white;
+    padding: 100px 0px;
+    font-size:26px;
+
+
+    @include mobile{
+        font-size: 19px;
+        padding: 50px 25px;
+    }
+
+    p{
+        &:first-child{
+            font-weight: bold;
+        }
+        &:nth-child(2){
+            width:85%;
+            color:#747474;
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

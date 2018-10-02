@@ -1,0 +1,88 @@
+#billion{
+    padding: 100px 0px;
+
+    @include mobile{
+        padding:50px 20px;
+    }
+    .container{
+        display: flex;
+        width:97%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include mobile{
+            flex-direction: column;
+            padding:0px;
+        }
+
+        & > div{
+            flex-basis: 47.5%;
+            background: $bgSection;
+            padding: 100px;
+
+            @include mobile{
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .desc{
+
+            @include mobile{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            ul{
+               margin-bottom: 50px;
+               font-family: 'SF-Thin';
+
+               @include mobile  {              
+                    flex-basis: 45%;
+                }
+
+                &:first-child{
+                    li{
+                        &:first-child{
+                            font-size: 60px;
+                            font-family: 'SF-Pro-Display'; 
+
+                            @include mobile{
+                                font-size:38px;
+                            }
+                        }
+                    }
+                }
+
+                .the-billion{
+                    font-size: 60px;
+                    font-family: 'SF-Pro-Display';
+                    @include mobile{
+                        font-size:38px;
+                    }
+                }
+
+               
+            }
+            article{
+                strong{
+                    font-size: 30px;
+                    line-height: 35px;
+
+                }
+                p{
+                    font-size: 17px;
+                    line-height: 26px;
+                    color:$grey;
+
+                    @include mobile{
+                        line-height: 30px;
+                        letter-spacing: .5px;
+                    }
+                }
+            }
+        }
+    }
+}

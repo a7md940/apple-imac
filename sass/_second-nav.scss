@@ -1,0 +1,116 @@
+#second-nav{
+    background:rgba(255,255,255,.8);
+    position: sticky;
+    top:0px;
+    z-index: 8888;
+    .container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $lightGrey;
+        padding: 10px 0px;
+        @include mobile{
+            width:100%; 
+            padding-right: 2%;
+            padding-left: 2%;
+        }
+        @include midScreen{
+            width: 95%;
+            padding: 10px 5%;
+        }
+        @include tabletForText{
+            width: 95%;
+            padding: 10px 5%;
+        }
+        @include lgScreen{
+            width: 95%;
+            padding: 10px 12.5%;
+        }
+        div.imac-text{
+            flex-basis: 68%;
+            font-size: 25px;
+            font-weight: bolder;
+            @include mobile{
+                flex-basis: 10%;
+            }
+        }
+        i{
+            display:none;
+
+            @include mobile{
+                display:block;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+        ul{
+            display:flex;
+            list-style: none;
+            justify-content: flex-end;
+            align-items: center;
+            flex-basis: 45%;
+
+            @include mobile{
+                flex-direction: column;
+                position: absolute;
+                padding:0px 50px;
+                height:0px;
+                top:46px;
+                left:0px;
+                margin:0px;
+                width: 100%;
+                background:white;
+                justify-content: start;
+                align-items: start;
+                overflow: hidden;
+              
+
+                li{
+                    padding: 15px 0px;
+                    width: 100%;
+                    font-size: 14px !important;
+                    position: relative;
+                    top: -20px;
+                    opacity:0;
+                    &:not(:last-child){
+                        border-bottom: 1px solid $lightGrey;
+                    }
+                }
+            }
+
+            li{
+                width:30%;
+                margin: 0px 15px;
+                font-size:13px;
+                @include mobile{
+                    width: 95%;
+                }
+                &:first-child{
+                    color: #bdbdbd;
+                }
+
+                &:not(:first-child){
+                    cursor: pointer;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+
+            }
+        }
+        div.buy-btn{
+            text-align: right;
+            flex-basis: 5%;
+            align-items: center;
+            button{
+                cursor: pointer;
+                border:solid 1px #1482D0;
+                background: linear-gradient(to bottom,#409FEB,#1482D0);
+                border-radius: 3px;
+                color:white;
+                padding: 3px 10px;
+            }
+        }
+    }
+   
+}

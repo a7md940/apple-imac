@@ -1,0 +1,98 @@
+#vr{
+    padding: 50px 0px 100px;
+    .container{
+
+        .items{
+            display: flex;
+            justify-content: space-between;
+            
+            & > div{
+                flex-basis: 48%;
+                @include mobile{
+                    flex-basis: unset;
+                }
+                
+            }
+            .screen{
+                background: url('../images/pic5.jpg') no-repeat;
+                height: 1168px;
+                width: 544px;
+                background-position-y: bottom;
+
+                @include mobile{
+                    display: none;
+                }
+            }
+
+            .bag{
+                align-self: center;
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                @include mobile{
+                    display: flex;
+                    flex-direction: column;
+
+                    p,strong{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    p{
+                        margin-top: 28px;
+                        line-height: 15px !important;
+
+                        @include mobile{
+                            line-height: 25px !important;
+                            font-size: 20px !important;
+                        }
+                        strong{
+                            font-size: 20px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .bag-imgs{
+                        order: -1;
+                    }
+                }
+                strong{
+                    font-size:32px;
+                    font-family: 'SF-Pro-Display-Bold';
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 17px;
+                    line-height: 30px;
+                    width:85%;
+                    color:$grey;
+                    margin-bottom:100px;
+                }
+
+                .bag-imgs{
+
+                    @include mobile{
+                        transform: unset;
+                        text-align: center;
+                    }
+                    img:first-child{
+
+                    }
+                    img:first-child,
+                    img:nth-child(2){
+                        @include mobile{
+                            display:none;
+                        }
+                        
+                    }
+                    img:last-child{
+                        display: none;
+
+                        @include mobile{
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+/*!
+ *  START GLOBAL STYLE
+ */
+
+
+
+ html *{
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'SF-Pro-light';
+    padding:0px;
+    margin:0px;
+    background: white;
+}
+.container{
+    width:74%;
+    margin:0 auto;
+
+    @media (max-width: 768px){ 
+        width:95%;
+    }
+
+    @include midScreen{ 
+        width: 90%;
+    }
+}
+ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #0070C9;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.opacity-zero{
+    opacity: 0;
+}
+
+.section-grey{
+    padding: 100px 0px;
+    background: $bgSection;
+}
+
+.section-white{
+    padding: 100px 0px;
+    background: white;
+}
+
+
+.clear{
+    clear: both;
+}
+
+.img img{
+    width:100%;
+}
+
+strong{
+    font-family: 'SF-Pro-Display';
+    font-weight: bold;
+    display: block;
+}
+
+p{
+    font-family: 'SF-Thin';
+}
+/*!
+ *  END GLOBAL STYLE
+ */

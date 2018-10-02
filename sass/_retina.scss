@@ -1,0 +1,48 @@
+#retina.parent-parallax{
+    background: $bgSection;
+    padding: 100px 30px;
+    height: 1200px;
+    overflow: hidden;
+
+    @include mobile{
+        height: unset;
+        padding: 100px 30px 0px 30px;
+        height: 500px;
+    }
+
+    .container{
+
+        span{
+            font-size: 24px;
+            display: block;
+            @include mobile{
+                font-size:17px;
+            }
+        }
+        strong{
+            font-size:72px;
+            font-family: 'SF-Pro-Display-Bold';
+            width: 59%;
+            display: block;
+
+            @include mobile{
+                font-size:28px;
+                width:100%;
+            }
+        }
+    }
+
+
+    .screen-img{
+
+        img{
+            width: 100%;
+            transform: translate3d(0,0,0);
+            transition: .01s all ease-in-out;
+        }
+
+        @include mobile{
+            margin-top: 100px;
+        }
+    }
+}

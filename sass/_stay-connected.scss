@@ -1,0 +1,176 @@
+#stay-connected{
+    padding-top:0px;
+    overflow: hidden;
+    .img{
+
+        background-size: 1273px 740px;
+        background-repeat: no-repeat;
+        background-image: url('../images/stay_connected_large.jpg');
+        height: 800px;
+        background-position: right 0;
+        margin: 0 auto;
+        width: 1360px;
+        position: relative;
+        @include mobile{
+            background-size: 644px 195px;
+            background-position: -32px top;
+            width:unset;     
+            height: 500px;  
+        }
+
+        & > div:not(.clear){
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            top: 171px;
+            left: 140px;
+            @include mobile{
+                left: -351px;
+                top: 41px;
+
+            }
+                span{
+                font-size: 12px;
+                position: relative;
+                
+                &:nth-of-type(1){
+                    top: 279px;
+                    left:117px;
+                    @include mobile{
+                        left: 374px;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 275px;
+                        background: $lightGrey;
+                        top: -281px;
+                        left: 64px;
+                    }
+                }
+                &:nth-of-type(2){
+                    top: 295px;
+                    left: 143px;
+                    @include mobile{
+                        left: 366px;
+                        top: 319px;
+
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 276px;
+                        top: -282px;
+                        left: 35px;
+                        background: $lightGrey;
+
+                        @include mobile{
+                            height: 317px;
+                            top: -319px;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    top: 279px;
+                    left: 170px;
+                    @include mobile{
+                        top: 270px;
+                        left: 349px;
+                    
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 262px;
+                        top: -266px;
+                        left: 2px;
+                        background: $lightGrey;
+                    }
+                }
+                &:nth-of-type(4){
+                    top: 279px;
+                    left: 266px;
+                    width: 200px;
+                    @include mobile{
+                        top: 276px;
+                        left: 364px;
+                    }
+                    
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 270px;
+                        top: -273px;
+                        left: 31px;
+                        background: $lightGrey;
+                    }
+                }
+                &:nth-of-type(5){
+                    left: 187px;
+                    top: 302px;
+
+                    @include mobile{
+                        left: 269px;
+                        top: 205px;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 301px;
+                        top: -295px;
+                        left: 79px;
+                        background: $lightGrey;
+
+                        @include mobile{
+                            height: 210px;
+                            top: -202px;
+                            left: 37px;
+                        
+                        }
+                    }
+                }
+                
+                &:nth-of-type(6){
+                    top: 405px;
+                    left: -300px;
+                }
+
+                &:nth-of-type(7){
+                    top: 435px;
+                    left: 84px;
+                    width: 200px;
+                    height: 50px;
+                    background: url(../images/file_transfer_large.svg) no-repeat;
+                    display: block;
+
+                    @include mobile{
+                        left: 367px;
+                    }
+                }
+                &:nth-of-type(8){
+                    top: 390px;
+                    left: 189px;
+
+                    @include mobile{
+                        top: 390px;
+                        left: 481px;
+                    }
+                }
+                &:nth-of-type(9){
+                    top: 405px;
+                    left: 33px;
+                    @include mobile{
+                        top: 405px;
+                        left: 326px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

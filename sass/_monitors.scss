@@ -1,0 +1,153 @@
+#monitors{
+    background:white;
+    @include mobile{
+        width: 80%;
+        margin: 0 auto;
+    }
+    @include midScreen{
+        width: 95%;
+    }
+
+
+    // set the monitors animation
+    @keyframes fadeFromRight {
+        from{
+            right: -500px;
+            opacity: 0;
+        }
+        to{
+            right: 0px;
+            opacity: 1;
+        }
+    }
+    // animation from left to right
+    @keyframes fadeFromLeft {
+        from{
+            left: -500px;
+            opacity: 0;
+        }
+        to{
+            left: 0px;
+            opacity: 1;
+        }
+    }
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .img-item{
+        flex-basis: 50%;
+        display:flex;
+        position: relative;
+
+        @include midScreen{
+            flex-basis: 55%;
+        }
+        img{
+            width:100%;
+            position: relative;
+
+        }
+        &:first-child{
+            justify-content: flex-end;
+            img{
+                align-self: flex-start;
+                width: 70%;
+                opacity: 0;
+                left: -500px;
+                animation: fadeFromLeft 1.5s forwards ease-in;
+                animation-delay: 1.5s;
+               
+                @include mobile{
+                    width:100%;
+                }
+                @include tabletForText{
+                    width:100%;
+                }
+                @include midScreen{
+                    width:95%;
+                }
+                @include lgScreen{
+                    width:95%;
+                }
+            }
+            
+        }
+        &:last-child{
+            margin-left: -50px;
+            img{
+                right: -700px;
+                animation: fadeFromRight 1.5s forwards ease-in;
+                animation-delay: 1.5s;
+                @include mobile{
+                    width:100%;
+                    align-self: flex-end;
+                }
+                @include tabletForText{
+                    width:100%;
+                    align-self: flex-end;
+                }
+                @include midScreen{
+                    width:95%;
+                    align-self: flex-end;
+                }
+                
+            }
+        }
+        
+    }
+    
+}
+
+
+#monitors-text{
+    font-family: 'SF-Pro-Display-Light';
+    padding: 50px 0px;
+    background:white;
+    p{
+        font-size: 22px;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 auto;
+        @include mobile{
+            letter-spacing: 1px;
+            text-align: left !important;
+            font-size: 19px;
+            width: 90% !important;
+            margin: 10px auto;
+        }
+        @include tabletForText{
+            width: 90%;
+        }
+        @include midScreen{
+            width: 90%;
+        }
+        &:nth-of-type(1){
+            color:$grey;
+            width: 55%;
+            margin: 50px auto;
+            text-align: center;
+            font-weight: lighter;
+            overflow-wrap: break-word;
+            @include mobile{
+                letter-spacing: 1px;
+                text-align: left !important;
+                font-size: 19px;
+                width: 90% !important;
+                margin: 10px auto;
+            }
+            @include tabletForText{
+                width: 90%;
+            }
+            @include midScreen{
+                width: 75%;
+            }
+        }
+        &:nth-of-type(2){
+            font-weight: bolder;
+        }
+        &:nth-of-type(3){
+            font-weight: bolder;
+        }
+    }
+}

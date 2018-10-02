@@ -1,0 +1,49 @@
+#vision{
+    background:white;
+    @include mobile{
+        padding: 50px 0px;
+    }
+
+    // keyFrame for vision section
+    @keyframes fadein{
+        100%{
+            opacity: 1;
+        }
+    }
+    text-align: center;
+    padding: 100px 0px;
+    font-family: 'SF-Pro-Display';
+    opacity:0;
+    animation: fadein 1s ease-in forwards;
+    animation-delay: 1s;
+    strong{
+        font-size:40px;
+
+        @include mobile{
+            font-size: 20px;
+        }
+        @include tabletForText{
+            font-size: 25px;
+        }
+    }
+    h1{
+        font-size: 80px;
+        width:60%;
+        margin:0 auto;
+        
+        @include mobile{
+            font-size: 38px;
+            width: 90%;
+        }
+        @include tabletForText{
+            font-size: 40px;
+            width: 95%;
+        }
+
+        @include midScreen {
+            width: 90%;
+            font-size: 80px;
+        }
+
+    }
+}

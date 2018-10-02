@@ -1,0 +1,158 @@
+#apple-accessories{
+    overflow: hidden;
+    @include mobile{
+        padding: 50px 25px;
+        
+    }
+    .container{
+
+        .desc{
+            span{
+                font-size:24px;
+
+                @include mobile{
+                    font-size: 17px;
+                }
+            }
+            strong{
+                font-size: 72px;
+                @include mobile{
+                    font-size: 31px;
+                   &:first-of-type{
+                    margin-top: 20px;
+                   }
+                }
+            }
+            p{
+                font-size: 26px;
+                width: 75%;
+                @include mobile{
+                    font-size: 17px;
+                    line-height: 30px;
+                    letter-spacing: .5px;
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+    .pics{
+
+        @include mobile{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .row1{
+            display:flex;
+            justify-content: space-between;
+            @include mobile{
+                order:1;
+                flex-wrap: wrap;
+                margin-top: 69px;
+            }
+            
+
+
+            img{
+                &:first-of-type{
+                    margin-left:-300px;
+
+                    @include mobile{
+                        width:300px;
+                        height: 86px;
+                        margin:0px;
+                        position: relative;
+                        left: -200px;
+                        top: 19px;
+                    }
+                }
+
+                &:last-of-type{
+                    margin-left: 100px;
+
+                    @include mobile{
+                        width:172px ;
+                        height:122px;
+                        margin:0px;
+                        order:-1;
+                    }
+                }
+            }
+        }
+        .row2{
+            display:flex;
+            justify-content: center;
+            margin-top: 70px;
+            
+            img{
+
+                &:first-child{
+                    margin-right: 50px;
+
+                    @include mobile{
+                        width:75px;
+                        height: 127px;
+                        margin:0px;
+                    }
+                }
+
+                &:last-child{
+                    @include mobile{
+                        width:291px ;
+                        height:122px;
+                        margin:0px;
+                        order:-1;
+                        margin-left: -143px;
+                    }
+                }
+            }
+        }
+
+        
+    }
+    .desc-uls{
+        display:flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        
+
+        ul{
+            
+            &:not(:first-child){
+                margin-left: 50px;
+            }
+
+            li{
+                strong{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        @include mobile{
+            flex-direction: column;
+
+            ul{
+
+                margin-left:25px !important;
+
+                li{
+                    strong{
+                        width: 65%;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        line-height: 25px;
+                    }
+
+                    p{
+                        line-height: 28px;
+                        letter-spacing: .5px;
+                        width:85%;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
